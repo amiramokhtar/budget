@@ -31,8 +31,7 @@ if 'df' in st.session_state:
     df = st.session_state.df
     df_filtered = st.session_state.df_filtered
 else:
-    DATA_FILE = "D:\Bech albtros analysis\Cleaned_Hotel_Booking.csv"
-
+    DATA_FILE = "Cleaned_Hotel_Booking.csv"
     if os.path.exists(DATA_FILE):
         df = pd.read_csv(DATA_FILE)
         # Convert date columns if available
@@ -45,7 +44,6 @@ else:
     else:
         st.error("Please upload data from the main page first.")
         st.stop()
-
 # ==========================================
 # Machine Learning Section
 # ==========================================
